@@ -12,11 +12,12 @@ const About = () => {
         </h2>
 
         {/* Texto introductorio */}
-        <p className="text-base lg:text-lg fhd:text-xl 2k:text-2xl text-muted-foreground leading-relaxed mb-12 animate-fade-in max-w-4xl">
-          Soy un profesional apasionado por la tecnología y el desarrollo de software,
-          con una sólida formación académica y experiencia en análisis funcional,
-          programación y desarrollo frontend.
+        <p className="text-base lg:text-lg fhd:text-xl 2k:text-2xl text-muted-foreground leading-relaxed mb-12 animate-fade-in max-w-4xl text-justify">
+          Soy un desarrollador fullstack formado en programación y con experiencia en análisis funcional, desarrollo de software y gestión de procesos. Mi recorrido comenzó en áreas administrativas y de calidad, donde incorporé una metodología de trabajo basada en ISO 9001, la mejora continua y una comprensión integral del negocio.
+
+          Esa base me guió hacia el mundo del desarrollo, donde hoy diseño y construyo soluciones web, mobile y desktop, integrando también gestión de bases de datos, automatizaciones y herramientas de inteligencia artificial. Combino técnica y análisis para crear sistemas claros, eficientes y orientados al usuario.
         </p>
+
 
         {/* === CARD + FOTO (2 columnas dentro del mismo ancho que Projects) === */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -53,9 +54,9 @@ const About = () => {
           {/* FOTO ALINEADA PERFECTA */}
           <div className="flex justify-center">
             <div className="rounded-xl overflow-hidden shadow-lg w-64 lg:w-72 fhd:w-80 2k:w-96 transition-transform duration-300 hover:scale-105">
-              <img 
-                src={profile} 
-                alt="Nahuel González" 
+              <img
+                src={profile}
+                alt="Nahuel González"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -81,7 +82,11 @@ const About = () => {
                 "Tailwind CSS",
                 "Git",
                 "Análisis Funcional",
-                "ISO 9001"
+                "ISO 9001",
+                "Python",
+                "C",
+                ".NET",
+                "JIRA"
               ].map((skill) => (
                 <span
                   key={skill}
@@ -92,8 +97,37 @@ const About = () => {
               ))}
             </div>
           </CardContent>
-        </Card>
 
+        </Card>
+        <Card className="animate-fade-in mt-12">
+          <CardHeader>
+            <CardTitle className="text-xl lg:text-2xl fhd:text-3xl 2k:text-4xl">
+              Habilidades Blandas
+            </CardTitle>
+          </CardHeader>
+
+          <CardContent>
+            <div className="flex flex-wrap gap-2 lg:gap-3">
+              {[
+                "Metodologías ágiles",
+                "Scrum",
+                "Kanban",
+                "Trabajo en equipo",
+                "Comunicación efectiva",
+                "Resolución de problemas",
+                "Gestión del tiempo"
+              ].map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1.5 bg-muted text-foreground rounded-md text-sm lg:text-base hover:bg-primary hover:text-primary-foreground transition"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </CardContent>
+
+        </Card>
       </div>
     </section>
   );
