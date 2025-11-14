@@ -13,9 +13,9 @@ const About = () => {
 
         {/* Texto introductorio */}
         <p className="text-base lg:text-lg fhd:text-xl 2k:text-2xl text-muted-foreground leading-relaxed mb-12 animate-fade-in max-w-4xl text-justify">
-          Soy un desarrollador fullstack formado en programación y con experiencia en análisis funcional, desarrollo de software y gestión de procesos. Mi recorrido comenzó en áreas administrativas y de calidad, donde incorporé una metodología de trabajo basada en ISO 9001, la mejora continua y una comprensión integral del negocio.
+          Soy desarrollador fullstack con enfoque en análisis funcional y optimización de procesos. Mi carrera comenzó en áreas administrativas y de calidad, donde aprendí a trabajar con estándares ISO 9001 y a pensar cada tarea desde la eficiencia y la mejora continua. Esa mirada técnica y metodológica me llevó al desarrollo de software, donde combino lógica, diseño y análisis para crear soluciones claras y de impacto.
 
-          Esa base me guió hacia el mundo del desarrollo, donde hoy diseño y construyo soluciones web, mobile y desktop, integrando también gestión de bases de datos, automatizaciones y herramientas de inteligencia artificial. Combino técnica y análisis para crear sistemas claros, eficientes y orientados al usuario.
+          Como cofundador de RGN Software, diseño e implemento herramientas para pymes que integran automatización, bases de datos e inteligencia artificial. Creo firmemente en la tecnología que simplifica, potencia y ordena.
         </p>
 
 
