@@ -1,6 +1,13 @@
 import profile from "@/assets/profile-photo.jpg";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 
+const aboutLines = [
+  "Soy desarrollador fullstack con enfoque en análisis funcional y optimización de procesos. Mi carrera comenzó en áreas administrativas y de calidad, donde aprendí a trabajar con estándares ISO 9001 y a pensar cada tarea desde la eficiencia y la mejora continua.",
+  "Esa mirada técnica y metodológica me llevó al desarrollo de software, donde combino lógica, diseño y análisis para crear soluciones claras y de impacto.",
+  "Como cofundador de RGN Software, diseño e implemento herramientas para pymes que integran automatización, bases de datos e inteligencia artificial.",
+  "Creo firmemente en la tecnología que simplifica, potencia y ordena."
+];
+
 const About = () => {
   return (
     <section id="about" className="py-16 lg:py-24 fhd:py-32 2k:py-40 bg-background">
@@ -11,13 +18,18 @@ const About = () => {
           Sobre mí
         </h2>
 
-        {/* Texto introductorio */}
-        <p className="text-base lg:text-lg fhd:text-xl 2k:text-2xl text-muted-foreground leading-relaxed mb-12 animate-fade-in max-w-4xl text-justify">
-          Soy desarrollador fullstack con enfoque en análisis funcional y optimización de procesos. Mi carrera comenzó en áreas administrativas y de calidad, donde aprendí a trabajar con estándares ISO 9001 y a pensar cada tarea desde la eficiencia y la mejora continua. Esa mirada técnica y metodológica me llevó al desarrollo de software, donde combino lógica, diseño y análisis para crear soluciones claras y de impacto.
-
-          Como cofundador de RGN Software, diseño e implemento herramientas para pymes que integran automatización, bases de datos e inteligencia artificial. Creo firmemente en la tecnología que simplifica, potencia y ordena.
-        </p>
-
+        {/* Texto con reveal-line */}
+        <div className="mb-12 max-w-4xl space-y-3">
+          {aboutLines.map((line, index) => (
+            <p
+              key={index}
+              className="reveal-line text-base lg:text-lg fhd:text-xl 2k:text-2xl text-muted-foreground leading-relaxed text-justify"
+              style={{ animationDelay: `${index * 0.25}s` }}
+            >
+              {line}
+            </p>
+          ))}
+        </div>
 
         {/* === CARD + FOTO (2 columnas dentro del mismo ancho que Projects) === */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -74,20 +86,7 @@ const About = () => {
 
           <CardContent>
             <div className="flex flex-wrap gap-2 lg:gap-3">
-              {[
-                "React",
-                "TypeScript",
-                "JavaScript",
-                "HTML / CSS",
-                "Tailwind CSS",
-                "Git",
-                "Análisis Funcional",
-                "ISO 9001",
-                "Python",
-                "C",
-                ".NET",
-                "JIRA"
-              ].map((skill) => (
+              {["React", "TypeScript", "JavaScript", "HTML / CSS", "Tailwind CSS", "Git", "Análisis Funcional", "ISO 9001", "Python", "C", ".NET", "JIRA"].map((skill) => (
                 <span
                   key={skill}
                   className="px-3 py-1.5 bg-muted text-foreground rounded-md text-sm lg:text-base hover:bg-primary hover:text-primary-foreground transition"
@@ -97,8 +96,8 @@ const About = () => {
               ))}
             </div>
           </CardContent>
-
         </Card>
+
         <Card className="animate-fade-in mt-12">
           <CardHeader>
             <CardTitle className="text-xl lg:text-2xl fhd:text-3xl 2k:text-4xl">
@@ -108,15 +107,7 @@ const About = () => {
 
           <CardContent>
             <div className="flex flex-wrap gap-2 lg:gap-3">
-              {[
-                "Metodologías ágiles",
-                "Scrum",
-                "Kanban",
-                "Trabajo en equipo",
-                "Comunicación efectiva",
-                "Resolución de problemas",
-                "Gestión del tiempo"
-              ].map((skill) => (
+              {["Metodologías ágiles", "Scrum", "Kanban", "Trabajo en equipo", "Comunicación efectiva", "Resolución de problemas", "Gestión del tiempo"].map((skill) => (
                 <span
                   key={skill}
                   className="px-3 py-1.5 bg-muted text-foreground rounded-md text-sm lg:text-base hover:bg-primary hover:text-primary-foreground transition"
@@ -126,7 +117,6 @@ const About = () => {
               ))}
             </div>
           </CardContent>
-
         </Card>
       </div>
     </section>
@@ -134,4 +124,5 @@ const About = () => {
 };
 
 export default About;
+
 
