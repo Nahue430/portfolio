@@ -1,4 +1,4 @@
-import profilePhoto from "@/assets/profile-photo.jpg";
+import logoPhoto from "@/assets/logo.png";
 
 const Header = () => {
   return (
@@ -8,11 +8,18 @@ const Header = () => {
 
           {/* --- LOGO + NOMBRE --- */}
           <div className="flex items-center gap-3 lg:gap-4 fhd:gap-6 2k:gap-8">
-            <img
-              src={profilePhoto}
-              alt="Nahuel González"
-              className="w-10 h-10 lg:w-12 lg:h-12 fhd:w-14 fhd:h-14 2k:w-16 2k:h-16 rounded-full object-cover border-2 border-primary"
-            />
+            <div className="relative group">
+              {/* Glow sutil detrás del logo */}
+              <span className="absolute inset-0 rounded-full bg-gradient-to-br from-beige-300/40 to-transparent blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+
+              {/* Imagen del logo con animación de giro */}
+              <img
+                src={logoPhoto}
+                alt="Nahuel González"
+                className="relative z-10 w-10 h-10 lg:w-12 lg:h-12 fhd:w-14 fhd:h-14 2k:w-16 2k:h-16 rounded-full object-cover border-2 border-primary transform transition-transform duration-700 group-hover:scale-110 group-hover:rotate-[360deg]"
+              />
+            </div>
+
             <div>
               <h1 className="text-base lg:text-lg fhd:text-xl 2k:text-2xl font-bold text-foreground">
                 Nahuel González
@@ -38,20 +45,11 @@ const Header = () => {
               >
                 {item.name}
 
-                {/* Subrayado líquido */}
-                {/* Primera línea izquierda */}
+                {/* Subrayado doble escalonado */}
                 <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary group-hover:w-1/2 transition-all duration-300 origin-left"></span>
-
-                {/* Segunda línea izquierda (más fina y con delay) */}
                 <span className="absolute left-0 -bottom-2 h-[1px] w-0 bg-primary/60 group-hover:w-1/2 transition-all duration-500 origin-left delay-150"></span>
-
-                {/* Primera línea derecha */}
                 <span className="absolute right-0 -bottom-1 h-[2px] w-0 bg-primary group-hover:w-1/2 transition-all duration-300 origin-right"></span>
-
-                {/* Segunda línea derecha (más fina y con delay) */}
                 <span className="absolute right-0 -bottom-2 h-[1px] w-0 bg-primary/60 group-hover:w-1/2 transition-all duration-500 origin-right delay-150"></span>
-
-
               </a>
             ))}
           </nav>
@@ -63,4 +61,6 @@ const Header = () => {
 };
 
 export default Header;
+
+
 
