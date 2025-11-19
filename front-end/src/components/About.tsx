@@ -10,7 +10,8 @@ const aboutLines = [
 
 const About = () => {
   return (
-    <section id="about" className="py-16 lg:py-24 fhd:py-32 2k:py-40 bg-background">
+    <section id="about" className="pt-1 lg:pt-2 fhd:pt-3 2k:pt-4 pb-16 lg:pb-24 fhd:pb-32 2k:pb-40 bg-background">
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 fhd:px-12 2k:px-16">
 
         {/* Título */}

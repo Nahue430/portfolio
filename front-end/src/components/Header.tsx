@@ -1,6 +1,17 @@
 import logoPhoto from "@/assets/logo.png";
 
 const Header = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const scrollToContact = () => {
+    const contactSection = document.querySelector("#contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="fixed top-0 w-full bg-background/80 backdrop-blur-sm border-b border-border z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 fhd:px-12 2k:px-16">
@@ -8,11 +19,9 @@ const Header = () => {
 
           {/* --- LOGO + NOMBRE --- */}
           <div className="flex items-center gap-3 lg:gap-4 fhd:gap-6 2k:gap-8">
-            <div className="relative group">
-              {/* Glow sutil detrás del logo */}
+            {/* Logo clickeable - scroll arriba */}
+            <div className="relative group cursor-pointer" onClick={scrollToTop}>
               <span className="absolute inset-0 rounded-full bg-gradient-to-br from-beige-300/40 to-transparent blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-
-              {/* Imagen del logo con animación de giro */}
               <img
                 src={logoPhoto}
                 alt="Nahuel González"
@@ -20,10 +29,12 @@ const Header = () => {
               />
             </div>
 
-            <div>
-              <h1 className="text-base lg:text-lg fhd:text-xl 2k:text-2xl font-bold text-foreground">
+            {/* Nombre clickeable - scroll a contacto */}
+            <div onClick={scrollToContact} className="cursor-pointer">
+              <h1 className="text-base lg:text-lg fhd:text-xl 2k:text-2xl font-bold text-foreground relative inline-block transition-all duration-500 hover:text-primary hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(210,180,140,0.6)]">
                 Nahuel González
               </h1>
+
               <p className="text-xs lg:text-sm fhd:text-base 2k:text-lg text-muted-foreground">
                 Desarrollador Fullstack · Analista Funcional · Especialista en Integraciones y Automatización
               </p>
@@ -61,6 +72,9 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
 
 
 
