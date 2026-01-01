@@ -1,4 +1,4 @@
-import profile from "@/assets/profile-photo.jpg";
+import profile from "@/assets/profile-foto.jpg";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 
 const aboutLines = [

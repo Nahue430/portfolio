@@ -11,9 +11,10 @@ const certificates = [
   },
   {
     title: "Auditor Interno ISO 9001",
-    institution: "Organismo Certificador",
+    institution: "Organismo Certificador IRAM",
     year: "2022",
-    description: "Certificación en auditoría de sistemas de gestión de calidad según norma ISO 9001."
+    description: "Certificación en auditoría de sistemas de gestión de calidad según norma ISO 9001.",
+    pdf: "/certificates/IRAM-ISO-9001.pdf"
   },
   {
     title: "Desarrollo Web Frontend",
@@ -69,13 +70,19 @@ const Certificates = () => {
                 </p>
               </CardContent>
               <CardFooter>
-                <Button 
-                  variant="outline" 
-                  className="w-full text-sm lg:text-base fhd:text-lg 2k:text-xl"
-                >
-                  <Download className="w-4 h-4 lg:w-5 lg:h-5 fhd:w-6 fhd:h-6 2k:w-7 2k:h-7 mr-2" />
-                  Descargar PDF
-                </Button>
+                {cert.pdf ? (
+                  <Button asChild variant="outline" className="w-full text-sm lg:text-base fhd:text-lg 2k:text-xl">
+                    <a href={cert.pdf} download target="_blank" rel="noopener noreferrer">
+                      <Download className="w-4 h-4 lg:w-5 lg:h-5 fhd:w-6 fhd:h-6 2k:w-7 2k:h-7 mr-2" />
+                      Descargar PDF
+                    </a>
+                  </Button>
+                ) : (
+                  <Button variant="outline" className="w-full text-sm lg:text-base fhd:text-lg 2k:text-xl" disabled>
+                    <Download className="w-4 h-4 lg:w-5 lg:h-5 fhd:w-6 fhd:h-6 2k:w-7 2k:h-7 mr-2" />
+                    No disponible
+                  </Button>
+                )}
               </CardFooter>
             </Card>
           ))}
