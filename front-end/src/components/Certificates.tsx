@@ -7,26 +7,28 @@ const certificates = [
     title: "Tecnicatura Universitaria en Programación",
     institution: "Universidad Tecnológica Nacional (UTN)",
     year: "2023",
-    description: "Formación integral en programación, análisis de sistemas y desarrollo de software."
+    description: "Formación integral en programación, análisis de sistemas y desarrollo de software.",
+    pdf: "/certificates/UTN-certificate.pdf"
   },
   {
     title: "Auditor Interno ISO 9001",
     institution: "Organismo Certificador IRAM",
     year: "2022",
-    description: "Certificación en auditoría de sistemas de gestión de calidad según norma ISO 9001.",
+    description: "Certificación que acredita competencias en auditoría de sistemas de gestión de la calidad conforme a la norma ISO 9001.",                                         
     pdf: "/certificates/IRAM-ISO-9001.pdf"
   },
   {
-    title: "Desarrollo Web Frontend",
-    institution: "Plataforma Online",
-    year: "2023",
-    description: "Especialización en React, TypeScript, y tecnologías frontend modernas."
+    title: "Inglés",
+    institution: "FreeCodeCamp",
+    year: "2025",
+    description: "Certificación que acredita nivel de inglés B1 con enfoque en comunicación técnica y profesional para desarrolladores de software.",
+    pdf: "/certificates/freeCodeCamp-english-B1-Passed.pdf"
   },
   {
-    title: "JavaScript Avanzado",
-    institution: "Plataforma Online",
-    year: "2022",
-    description: "Curso avanzado de JavaScript ES6+, async/await, y programación funcional."
+    title: "AWS",
+    institution: "Udemy",
+    year: "2026",
+    description: "Curso de AWS para desarrolladores de software.",
   },
   {
     title: "Git y GitHub",
