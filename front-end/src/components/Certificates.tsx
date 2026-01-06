@@ -31,10 +31,11 @@ const certificates = [
     description: "Curso de AWS para desarrolladores de software.",
   },
   {
-    title: "Git y GitHub",
-    institution: "Plataforma Online",
-    year: "2022",
-    description: "Control de versiones, trabajo colaborativo y gestión de repositorios."
+    title: "Workflow Automation N8N",
+    institution: "XAcademy",
+    year: "2025",
+    description: "Certificación que acredita competencias en automatización de flujos de trabajo con n8n, orientada a la integración de sistemas y procesos.",
+    pdf: "/certificates/Nahuel-González-Workflow-Automation.pdf"
   },
   {
     title: "Responsive Web Design",
