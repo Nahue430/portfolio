@@ -24,12 +24,7 @@ const certificates = [
     description: "Certificación que acredita nivel de inglés B1 con enfoque en comunicación técnica y profesional para desarrolladores de software.",
     pdf: "/certificates/freeCodeCamp-english-B1-Passed.pdf"
   },
-  {
-    title: "AWS",
-    institution: "Udemy",
-    year: "2026",
-    description: "Curso de AWS para desarrolladores de software.",
-  },
+  
   {
     title: "Workflow Automation N8N",
     institution: "XAcademy",
@@ -37,12 +32,7 @@ const certificates = [
     description: "Certificación que acredita competencias en automatización de flujos de trabajo con n8n, orientada a la integración de sistemas y procesos.",
     pdf: "/certificates/Nahuel-González-Workflow-Automation.pdf"
   },
-  {
-    title: "Responsive Web Design",
-    institution: "Plataforma Online",
-    year: "2021",
-    description: "Diseño web responsive, mobile-first y mejores prácticas de UI/UX."
-  }
+
 ];
 
 const Certificates = () => {

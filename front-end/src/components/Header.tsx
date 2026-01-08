@@ -36,7 +36,7 @@ const Header = () => {
               </h1>
 
               <p className="text-xs lg:text-sm fhd:text-base 2k:text-lg text-muted-foreground">
-                Desarrollador Fullstack · Analista Funcional · Especialista en Integraciones y Automatización
+                Desarrollador Fullstack · Analista Funcional · Especialista en UX y Automatización
               </p>
             </div>
           </div>
