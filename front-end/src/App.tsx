@@ -15,17 +15,19 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+
       <BrowserRouter>
         <ScrollProgress />
 
-        {/* Layout principal con márgenes del header y footer fijos */}
-        <div className="min-h-screen flex flex-col justify-between pt-[80px] lg:pt-[100px] fhd:pt-[120px] 2k:pt-[140px] pb-[80px] lg:pb-[100px] fhd:pb-[120px] 2k:pb-[140px]">
+        {/* Contenido principal */}
+        <div className="flex flex-col pt-[80px] lg:pt-[100px] fhd:pt-[120px] 2k:pt-[140px]">
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
 
+        {/* Footer SIEMPRE pegado al contenido */}
         <Footer />
       </BrowserRouter>
     </TooltipProvider>

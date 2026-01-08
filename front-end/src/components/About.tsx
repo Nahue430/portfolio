@@ -4,8 +4,8 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 const aboutLines = [
   "Soy desarrollador fullstack con enfoque en análisis funcional y optimización de procesos. Mi carrera comenzó en áreas administrativas y de calidad, donde aprendí a trabajar con estándares ISO 9001 y a pensar cada tarea desde la eficiencia y la mejora continua.",
   "Esa mirada técnica y metodológica me llevó al desarrollo de software, donde combino lógica, diseño y análisis para crear soluciones claras y de impacto.",
-  "Como cofundador de RGN Software, diseño e implemento herramientas para pymes que integran automatización, bases de datos e inteligencia artificial.",
-  "Creo firmemente en la tecnología que simplifica, potencia y ordena."
+  "Como desarrollador freelance, he colaborado con pymes en la implementación de herramientas que integran automatización, bases de datos y mejora de procesos, aportando soluciones prácticas y medibles.",
+  "Me motiva incorporarme a equipos donde pueda aportar esta visión integral, seguir aprendiendo y contribuir al desarrollo de productos tecnológicos que generen valor real."
 ];
 
 const About = () => {
