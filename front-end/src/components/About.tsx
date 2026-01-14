@@ -1,4 +1,4 @@
-import profile from "@/assets/profile-foto.jpg";
+import profile from "@/assets/Foto3.jpg";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 
 const aboutLines = [
@@ -58,8 +58,8 @@ const About = () => {
               </div>
 
               <div>
-                <p className="text-base font-medium">Cursos de Desarrollo Web</p>
-                <p className="text-muted-foreground">Tecnologías frontend modernas</p>
+                <p className="text-base font-medium">Capacitación continua en desarrollo web, cloud e inteligencia artificial</p>
+                <p className="text-muted-foreground">Tecnologías web, cloud y automatización</p>
               </div>
             </CardContent>
           </Card>
