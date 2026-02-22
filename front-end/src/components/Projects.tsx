@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,39 +13,19 @@ import imagen1 from "@/assets/imagen1.png";
 import imagen2 from "@/assets/imagen2.png";
 import imagen3 from "@/assets/imagen3.png";
 
-const projects = [
-  {
-    title: "Landing Page",
-    description:
-      "Landing Page con secciones y contactos con una interfaz intuitiva y moderna. Desarrollada con React, TypeScript y Tailwind CSS.",
-    image: imagen1,
-    github: "https://github.com/nahueldgonzalez",
-    video: "/videos/video1.mp4",
-  },
-  {
-    title: "Agente IA para E-commerce",
-    description:
-      "Agente de ventas automatizado que gestiona consultas y productos mediante N8N, Telegram y Gemini. Backend en JavaScript y base de datos en Cloudflare.",
-    image: imagen2,
-    github: "https://github.com/nahueldgonzalez",
-    video: "/videos/VideoAgent.mp4",
-  },
-  {
-    title: "Ecommerce de Perfumería",
-    description:
-      "Tienda online de perfumería con catálogo, carrito y pagos integrados. Construida con .NET, SQL y React, enfocada en rendimiento y escalabilidad.",
-    image: imagen3,
-    github: "https://github.com/nahueldgonzalez",
-    video: "/videos/video1.mp4",
-  },
-];
-
 const Projects = () => {
+  const { t } = useTranslation();
+
+  const projects = t("projects.items", { returnObjects: true }) as any[];
+
+  const images = [imagen1, imagen2, imagen3];
+  const videos = ["/videos/video1.mp4", "/videos/VideoAgent.mp4", "/videos/video1.mp4"];
+
   return (
     <section id="projects" className="py-16 lg:py-24 bg-muted">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-12">
-          Proyectos
+          {t("projects.title")}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -55,7 +36,7 @@ const Projects = () => {
             >
               <div className="aspect-video overflow-hidden">
                 <img
-                  src={project.image}
+                  src={images[index]}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                 />
@@ -73,7 +54,7 @@ const Projects = () => {
               <CardFooter className="gap-4">
                 <Button asChild className="flex-1">
                   <a
-                    href={project.github}
+                    href="https://github.com/nahueldgonzalez"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -84,17 +65,19 @@ const Projects = () => {
                 <Dialog>
                   <DialogTrigger asChild>
                     <Button variant="outline" className="flex-1">
-                      Demo
+                      {t("projects.demo")}
                     </Button>
                   </DialogTrigger>
 
                   <DialogContent className="max-w-4xl">
                     <DialogHeader>
-                      <DialogTitle>{project.title} – Demo</DialogTitle>
+                      <DialogTitle>
+                        {project.title} – {t("projects.demo")}
+                      </DialogTitle>
                     </DialogHeader>
 
                     <video
-                      src={project.video}
+                      src={videos[index]}
                       controls
                       autoPlay
                       className="w-full rounded-lg"

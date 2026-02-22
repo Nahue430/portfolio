@@ -1,0 +1,129 @@
+{
+  "navbar": {
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "certificates": "Certificados",
+    "contact": "Contacto"
+  },
+  "header": {
+    "subtitle": "Desarrollador Fullstack · Analista Funcional · Especialista en UX y Automatización"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "paragraphs": [
+      "Soy desarrollador fullstack con enfoque en análisis funcional y optimización de procesos. Mi carrera comenzó en áreas administrativas y de calidad, donde aprendí a trabajar con estándares ISO 9001 y a pensar cada tarea desde la eficiencia y la mejora continua.",
+      "Esa mirada técnica y metodológica me llevó al desarrollo de software, donde combino lógica, diseño y análisis para crear soluciones claras y de impacto.",
+      "Como desarrollador freelance, he colaborado con pymes en la implementación de herramientas que integran automatización, bases de datos y mejora de procesos, aportando soluciones prácticas y medibles.",
+      "Me motiva incorporarme a equipos donde pueda aportar esta visión integral, seguir aprendiendo y contribuir al desarrollo de productos tecnológicos que generen valor real."
+    ],
+    "education": {
+      "title": "Formación Académica",
+      "subtitle": "Estudios y certificaciones relevantes",
+      "degree": "Tecnicatura Universitaria en Programación",
+      "university": "Universidad Tecnológica Nacional (UTN)",
+      "iso": "Auditor Interno ISO 9001",
+      "isoDetail": "Gestión de Calidad - Certificación Oficial",
+      "continuous": "Capacitación continua en desarrollo web, cloud e inteligencia artificial",
+      "techFocus": "Tecnologías web, cloud y automatización"
+    },
+    "technicalSkills": {
+      "title": "Habilidades Técnicas",
+      "list": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "HTML / CSS",
+        "Tailwind CSS",
+        "Git",
+        "Análisis Funcional",
+        "ISO 9001",
+        "Python",
+        "C",
+        ".NET",
+        "JIRA"
+      ]
+    },
+    "softSkills": {
+      "title": "Habilidades Blandas",
+      "list": [
+        "Metodologías ágiles",
+        "Scrum",
+        "Kanban",
+        "Trabajo en equipo",
+        "Comunicación efectiva",
+        "Resolución de problemas",
+        "Gestión del tiempo"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "demo": "Demo",
+    "items": [
+      {
+        "title": "Landing Page",
+        "description": "Landing Page con secciones y formulario de contacto, diseñada con una interfaz moderna e intuitiva. Desarrollada con React, TypeScript y Tailwind CSS."
+      },
+      {
+        "title": "Agente IA para E-commerce",
+        "description": "Agente de ventas automatizado que gestiona consultas y productos mediante N8N, Telegram y Gemini. Backend en JavaScript y base de datos en Cloudflare."
+      },
+      {
+        "title": "E-commerce de Perfumería",
+        "description": "Tienda online de perfumería con catálogo dinámico, carrito y pagos integrados. Construida con .NET, SQL y React, enfocada en rendimiento y escalabilidad."
+      }
+    ]
+  },
+  "certificates": {
+  "title": "Certificados",
+  "download": "Descargar PDF",
+  "items": [
+    {
+      "title": "Tecnicatura Universitaria en Programación",
+      "institution": "Universidad Tecnológica Nacional (UTN)",
+      "year": "2023",
+      "description": "Formación integral en programación, análisis de sistemas y desarrollo de software."
+    },
+    {
+      "title": "Auditor Interno ISO 9001",
+      "institution": "Organismo Certificador IRAM",
+      "year": "2022",
+      "description": "Certificación que acredita competencias en auditoría de sistemas de gestión de la calidad conforme a la norma ISO 9001."
+    },
+    {
+      "title": "Inglés B1",
+      "institution": "FreeCodeCamp",
+      "year": "2025",
+      "description": "Certificación que acredita nivel B1 con enfoque en comunicación técnica y profesional para desarrolladores."
+    },
+    {
+      "title": "Workflow Automation N8N",
+      "institution": "XAcademy",
+      "year": "2025",
+      "description": "Certificación en automatización de flujos con n8n orientada a integración de sistemas y optimización de procesos."
+    }
+  ]
+},
+"contact": {
+  "title": "Contacto",
+  "infoTitle": "Información de Contacto",
+  "infoSubtitle": "Contáctame a través de cualquiera de estos medios",
+  "formTitle": "Envíame un Mensaje",
+  "formSubtitle": "Completa el formulario y te responderé pronto",
+  "name": "Nombre",
+  "email": "Email",
+  "message": "Mensaje",
+  "send": "Enviar Mensaje",
+  "emailSubject": "Mensaje desde mi portfolio",
+  "toastSuccessTitle": "Mensaje enviado",
+  "toastSuccessDesc": "Gracias por contactarme. Te responderé a la brevedad.",
+  "toastErrorTitle": "Error al enviar el mensaje",
+  "toastErrorDesc": "Ocurrió un problema. Por favor intentá nuevamente."
+},
+"footer": {
+  "tagline": "Desarrollo soluciones que transforman ideas en sistemas claros, útiles y escalables."
+}
+}
+
+
+
