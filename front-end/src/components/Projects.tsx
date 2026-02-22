@@ -9,31 +9,31 @@ import {
 } from "@/components/ui/dialog";
 
 import imagen1 from "@/assets/imagen1.png";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
+import imagen2 from "@/assets/imagen2.png";
+import imagen3 from "@/assets/imagen3.png";
 
 const projects = [
   {
     title: "Landing Page",
     description:
-      "Landing Page con secciones y contactos con una interfaz intuitiva y moderna. Desarrollada con React y TypeScript.",
+      "Landing Page con secciones y contactos con una interfaz intuitiva y moderna. Desarrollada con React, TypeScript y Tailwind CSS.",
     image: imagen1,
     github: "https://github.com/nahueldgonzalez",
     video: "/videos/video1.mp4",
   },
   {
-    title: "E-commerce Platform",
+    title: "Agente IA para E-commerce",
     description:
-      "Plataforma de comercio electrónico con carrito de compras, pasarela de pago y panel administrativo.",
-    image: project2,
+      "Agente de ventas automatizado que gestiona consultas y productos mediante N8N, Telegram y Gemini. Backend en JavaScript y base de datos en Cloudflare.",
+    image: imagen2,
     github: "https://github.com/nahueldgonzalez",
-    video: "/videos/video1.mp4",
+    video: "/videos/VideoAgent.mp4",
   },
   {
-    title: "Task Manager App",
+    title: "Ecommerce de Perfumería",
     description:
-      "Aplicación de gestión de tareas con funcionalidades de colaboración y notificaciones.",
-    image: project3,
+      "Tienda online de perfumería con catálogo, carrito y pagos integrados. Construida con .NET, SQL y React, enfocada en rendimiento y escalabilidad.",
+    image: imagen3,
     github: "https://github.com/nahueldgonzalez",
     video: "/videos/video1.mp4",
   },
