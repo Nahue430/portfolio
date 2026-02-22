@@ -1,0 +1,127 @@
+{
+  "navbar": {
+    "about": "About me",
+    "projects": "Projects",
+    "certificates": "Certificates",
+    "contact": "Contact"
+  },
+  "header": {
+    "subtitle": "Fullstack Developer · Functional Analyst · UX & Automation Specialist"
+  },
+  "about": {
+    "title": "About me",
+    "paragraphs": [
+      "I am a fullstack developer focused on functional analysis and process optimization. My career began in administrative and quality roles, where I learned to work with ISO 9001 standards and approach each task through efficiency and continuous improvement.",
+      "That technical and methodological mindset led me into software development, where I combine logic, design and analysis to build clear and impactful solutions.",
+      "As a freelance developer, I have collaborated with SMEs implementing tools that integrate automation, databases and process improvement, delivering practical and measurable results.",
+      "I am motivated to join teams where I can contribute this holistic perspective, continue learning and help develop technological products that create real value."
+    ],
+    "education": {
+      "title": "Academic Background",
+      "subtitle": "Relevant studies and certifications",
+      "degree": "University Technical Degree in Programming",
+      "university": "National Technological University (UTN)",
+      "iso": "Internal ISO 9001 Auditor",
+      "isoDetail": "Quality Management - Official Certification",
+      "continuous": "Continuous training in web development, cloud and artificial intelligence",
+      "techFocus": "Web technologies, cloud and automation"
+    },
+    "technicalSkills": {
+      "title": "Technical Skills",
+      "list": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "HTML / CSS",
+        "Tailwind CSS",
+        "Git",
+        "Functional Analysis",
+        "ISO 9001",
+        "Python",
+        "C",
+        ".NET",
+        "JIRA"
+      ]
+    },
+    "softSkills": {
+      "title": "Soft Skills",
+      "list": [
+        "Agile methodologies",
+        "Scrum",
+        "Kanban",
+        "Teamwork",
+        "Effective communication",
+        "Problem solving",
+        "Time management"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "demo": "Demo",
+    "items": [
+      {
+        "title": "Landing Page",
+        "description": "Landing page with structured sections and contact form, featuring a modern and intuitive interface. Built with React, TypeScript and Tailwind CSS."
+      },
+      {
+        "title": "AI Agent for E-commerce",
+        "description": "Automated sales agent that manages inquiries and products using N8N, Telegram and Gemini. Backend built in JavaScript with Cloudflare database."
+      },
+      {
+        "title": "Perfume E-commerce",
+        "description": "Online perfume store with dynamic catalog, cart and integrated payments. Developed with .NET, SQL and React, focused on performance and scalability."
+      }
+    ]
+  },
+  "certificates": {
+  "title": "Certificates",
+  "download": "Download PDF",
+  "items": [
+    {
+      "title": "University Technical Degree in Programming",
+      "institution": "National Technological University (UTN)",
+      "year": "2023",
+      "description": "Comprehensive education in programming, systems analysis and software development."
+    },
+    {
+      "title": "Internal ISO 9001 Auditor",
+      "institution": "IRAM Certification Body",
+      "year": "2022",
+      "description": "Certification validating competencies in auditing quality management systems under ISO 9001 standards."
+    },
+    {
+      "title": "English B1",
+      "institution": "FreeCodeCamp",
+      "year": "2025",
+      "description": "Certification validating B1 level English focused on technical and professional communication for developers."
+    },
+    {
+      "title": "Workflow Automation N8N",
+      "institution": "XAcademy",
+      "year": "2025",
+      "description": "Certification in workflow automation with n8n focused on system integration and process optimization."
+    }
+  ]
+},
+"contact": {
+  "title": "Contact",
+  "infoTitle": "Contact Information",
+  "infoSubtitle": "Reach out through any of the following channels",
+  "formTitle": "Send Me a Message",
+  "formSubtitle": "Fill out the form and I will reply shortly",
+  "name": "Name",
+  "email": "Email",
+  "message": "Message",
+  "send": "Send Message",
+  "emailSubject": "Message from my portfolio",
+  "toastSuccessTitle": "Message sent",
+  "toastSuccessDesc": "Thank you for reaching out. I will reply as soon as possible.",
+  "toastErrorTitle": "Error sending message",
+  "toastErrorDesc": "Something went wrong. Please try again."
+},
+"footer": {
+  "tagline": "I build solutions that transform ideas into clear, useful and scalable systems."
+}
+}
+
