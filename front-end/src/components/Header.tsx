@@ -1,11 +1,13 @@
 import logoPhoto from "@/assets/logo.png";
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
 
-  // 🔹 Persistencia automática del idioma
   useEffect(() => {
     const savedLang = localStorage.getItem("lang");
     if (savedLang && savedLang !== i18n.language) {
@@ -15,12 +17,14 @@ const Header = () => {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    setIsOpen(false);
   };
 
   const scrollToContact = () => {
     const contactSection = document.querySelector("#contact");
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
     }
   };
 
@@ -29,13 +33,22 @@ const Header = () => {
     localStorage.setItem("lang", lang);
   };
 
+  const navItems = [
+    { name: t("navbar.about"), href: "#about" },
+    { name: t("navbar.projects"), href: "#projects" },
+    { name: t("navbar.certificates"), href: "#certificates" },
+    { name: t("navbar.contact"), href: "#contact" },
+  ];
+
   return (
     <header className="fixed top-0 w-full bg-background/80 backdrop-blur-sm border-b border-border z-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 fhd:px-12 2k:px-16">
-        <div className="flex items-center justify-between h-16 lg:h-20 fhd:h-24 2k:h-28">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20">
 
           {/* LOGO + NOMBRE */}
-          <div className="flex items-center gap-3 lg:gap-4 fhd:gap-6 2k:gap-8">
+          <div className="flex items-center gap-4">
+
+            {/* LOGO CON GIRO */}
             <div
               className="relative group cursor-pointer"
               onClick={scrollToTop}
@@ -45,37 +58,34 @@ const Header = () => {
               <img
                 src={logoPhoto}
                 alt="Nahuel González"
-                className="relative z-10 w-10 h-10 lg:w-12 lg:h-12 fhd:w-14 fhd:h-14 2k:w-16 2k:h-16 rounded-full object-cover border-2 border-primary transform transition-transform duration-700 group-hover:scale-110 group-hover:rotate-[360deg]"
+                className="relative z-10 w-10 h-10 lg:w-12 lg:h-12 rounded-full object-cover border-2 border-primary transform transition-transform duration-700 group-hover:scale-110 group-hover:rotate-[360deg]"
               />
             </div>
 
+            {/* NOMBRE QUE VA A CONTACTO */}
             <div onClick={scrollToContact} className="cursor-pointer">
-              <h1 className="text-base lg:text-lg fhd:text-xl 2k:text-2xl font-bold text-foreground relative inline-block transition-all duration-500 hover:text-primary hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(210,180,140,0.6)]">
+              <h1 className="text-base lg:text-lg font-bold text-foreground relative inline-block transition-all duration-500 hover:text-primary hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(210,180,140,0.6)]">
                 Nahuel González
               </h1>
 
-              <p className="text-xs lg:text-sm fhd:text-base 2k:text-lg text-muted-foreground">
+              <p className="text-xs lg:text-sm text-muted-foreground">
                 {t("header.subtitle")}
               </p>
             </div>
           </div>
 
-          {/* NAV */}
-          <nav className="hidden md:flex items-center gap-4 lg:gap-6 fhd:gap-8 2k:gap-10">
+          {/* NAV DESKTOP */}
+          <nav className="hidden md:flex items-center gap-6">
 
-            {[
-              { name: t("navbar.about"), href: "#about" },
-              { name: t("navbar.projects"), href: "#projects" },
-              { name: t("navbar.certificates"), href: "#certificates" },
-              { name: t("navbar.contact"), href: "#contact" },
-            ].map((item) => (
+            {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="relative group text-sm lg:text-base fhd:text-lg 2k:text-xl text-foreground hover:text-primary transition-colors"
+                className="relative group text-sm lg:text-base text-foreground hover:text-primary transition-colors"
               >
                 {item.name}
 
+                {/* 4 líneas originales */}
                 <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary group-hover:w-1/2 transition-all duration-300 origin-left"></span>
                 <span className="absolute left-0 -bottom-2 h-[1px] w-0 bg-primary/60 group-hover:w-1/2 transition-all duration-500 origin-left delay-150"></span>
                 <span className="absolute right-0 -bottom-1 h-[2px] w-0 bg-primary group-hover:w-1/2 transition-all duration-300 origin-right"></span>
@@ -83,9 +93,8 @@ const Header = () => {
               </a>
             ))}
 
-            {/* 🌐 SELECTOR DE IDIOMA */}
-            <div className="flex items-center gap-2 ml-6 text-sm lg:text-base fhd:text-lg 2k:text-xl">
-
+            {/* SELECTOR IDIOMA */}
+            <div className="flex items-center gap-2 ml-6 text-sm">
               <span className="opacity-70">🌐</span>
 
               <button
@@ -111,18 +120,71 @@ const Header = () => {
               >
                 EN
               </button>
-
             </div>
-
           </nav>
+
+          {/* BOTÓN MOBILE */}
+          <button
+            className="md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
+
+      {/* MENÚ MOBILE */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.25 }}
+            className="absolute top-full left-0 w-full bg-background border-b border-border md:hidden"
+          >
+            <div className="flex flex-col items-center gap-6 py-6">
+
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-lg text-foreground hover:text-primary transition-colors"
+                >
+                  {item.name}
+                </a>
+              ))}
+
+              <div className="flex items-center gap-4 mt-4">
+                <button
+                  onClick={() => changeLanguage("es")}
+                  className={i18n.language === "es"
+                    ? "text-primary font-semibold"
+                    : "text-muted-foreground"}
+                >
+                  ES
+                </button>
+
+                <button
+                  onClick={() => changeLanguage("en")}
+                  className={i18n.language === "en"
+                    ? "text-primary font-semibold"
+                    : "text-muted-foreground"}
+                >
+                  EN
+                </button>
+              </div>
+
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
 
 export default Header;
-
 
 
 

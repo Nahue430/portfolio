@@ -112,13 +112,21 @@
   "formSubtitle": "Completa el formulario y te responderé pronto",
   "name": "Nombre",
   "email": "Email",
+  "countryCode": "Código país",
+  "phoneOptional": "Teléfono (opcional)",
   "message": "Mensaje",
   "send": "Enviar Mensaje",
   "emailSubject": "Mensaje desde mi portfolio",
   "toastSuccessTitle": "Mensaje enviado",
   "toastSuccessDesc": "Gracias por contactarme. Te responderé a la brevedad.",
   "toastErrorTitle": "Error al enviar el mensaje",
-  "toastErrorDesc": "Ocurrió un problema. Por favor intentá nuevamente."
+  "toastErrorDesc": "Ocurrió un problema. Por favor intentá nuevamente.",
+  "invalidEmailTitle": "Email inválido",
+  "invalidEmail": "Ingrese un email válido.",
+  "invalidCountryTitle": "Código inválido",
+  "invalidCountryCode": "El código debe comenzar con + y contener solo números.",
+  "invalidPhoneTitle": "Teléfono inválido",
+  "invalidPhone": "Ingrese solo números (6 a 15 dígitos)."
 },
 "footer": {
   "tagline": "Desarrollo soluciones que transforman ideas en sistemas claros, útiles y escalables."

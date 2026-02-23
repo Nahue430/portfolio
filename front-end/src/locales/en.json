@@ -112,13 +112,21 @@
   "formSubtitle": "Fill out the form and I will reply shortly",
   "name": "Name",
   "email": "Email",
+  "countryCode": "Country code",
+  "phoneOptional": "Phone (optional)",
   "message": "Message",
   "send": "Send Message",
   "emailSubject": "Message from my portfolio",
   "toastSuccessTitle": "Message sent",
   "toastSuccessDesc": "Thank you for reaching out. I will reply as soon as possible.",
   "toastErrorTitle": "Error sending message",
-  "toastErrorDesc": "Something went wrong. Please try again."
+  "toastErrorDesc": "Something went wrong. Please try again.",
+  "invalidEmailTitle": "Invalid email",
+  "invalidEmail": "Please enter a valid email address.",
+  "invalidCountryTitle": "Invalid country code",
+  "invalidCountryCode": "Code must start with + and contain only numbers.",
+  "invalidPhoneTitle": "Invalid phone number",
+  "invalidPhone": "Enter numbers only (6 to 15 digits)."
 },
 "footer": {
   "tagline": "I build solutions that transform ideas into clear, useful and scalable systems."
