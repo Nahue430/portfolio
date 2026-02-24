@@ -1,4 +1,4 @@
-import logoPhoto from "@/assets/logo.png";
+import logoPhoto from "@/assets/Logo.png";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
