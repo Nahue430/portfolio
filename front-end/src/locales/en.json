@@ -40,7 +40,10 @@
         "Python",
         "C",
         ".NET",
-        "JIRA"
+        "JIRA",
+        "SQL",
+        "N8N",
+        "Liquid"
       ]
     },
     "softSkills": {
@@ -52,7 +55,8 @@
         "Teamwork",
         "Effective communication",
         "Problem solving",
-        "Time management"
+        "Time management",
+        "SOLID principles"
       ]
     }
   },
@@ -71,6 +75,14 @@
       {
         "title": "Perfume E-commerce",
         "description": "Online perfume store with dynamic catalog, cart and integrated payments. Developed with .NET, SQL and React, focused on performance and scalability."
+      },
+      {
+        "title" : "Shopify Technical Challenge",
+        "description": "Custom Shopify solution to manage dynamic variant features and automated coupon logic. Built using Liquid, JavaScript, and advanced Shopify configuration, improving user experience and conversion flow."
+      },
+      {
+        "title" : "AI Sales Agent Challenge",
+        "description": "Technical challenge for an automated AI sales agent with database integration and conversational logic. Built with Cloudflare Workers, D1 and JavaScript, focused on e-commerce automation."
       }
     ]
   },

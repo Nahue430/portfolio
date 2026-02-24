@@ -13,13 +13,39 @@ import {
 import imagen1 from "@/assets/imagen1.png";
 import imagen2 from "@/assets/imagen2.png";
 import imagen3 from "@/assets/imagen3.png";
+import imagen4 from "@/assets/imagen4.png";
+import imagen5 from "@/assets/imagen5.png";
 
 const Projects = () => {
   const { t } = useTranslation();
 
   const projects = t("projects.items", { returnObjects: true }) as any[];
 
-  const images = [imagen1, imagen2, imagen3];
+  // 🔥 Metadata por proyecto
+  const projectMeta = [
+    {
+      github: "https://github.com/nahue430/perfumeria",
+      hasDemo: true,
+    },
+    {
+      github: "https://github.com/nahue430/ai-agent",
+      hasDemo: true,
+    },
+    {
+      github: "https://github.com/nahue430/shopify-challenge",
+      hasDemo: false,
+    },
+    {
+      github: "https://github.com/nahue430/laburen-challenge",
+      hasDemo: false,
+    },
+    {
+      github: "https://github.com/nahue430/otro-proyecto",
+      hasDemo: true,
+    },
+  ];
+
+  const images = [imagen1, imagen2, imagen3, imagen4, imagen5];
   const videos = ["/videos/video1.mp4", "/videos/VideoAgent.mp4", "/videos/video1.mp4"];
 
   return (
@@ -66,7 +92,7 @@ const Projects = () => {
                 <CardFooter className="gap-4">
                   <Button asChild className="flex-1">
                     <a
-                      href="https://github.com/nahueldgonzalez"
+                      href={projectMeta[index]?.github}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -74,28 +100,30 @@ const Projects = () => {
                     </a>
                   </Button>
 
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button variant="outline" className="flex-1">
-                        {t("projects.demo")}
-                      </Button>
-                    </DialogTrigger>
+                  {projectMeta[index]?.hasDemo && (
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button variant="outline" className="flex-1">
+                          {t("projects.demo")}
+                        </Button>
+                      </DialogTrigger>
 
-                    <DialogContent className="max-w-4xl">
-                      <DialogHeader>
-                        <DialogTitle>
-                          {project.title} – {t("projects.demo")}
-                        </DialogTitle>
-                      </DialogHeader>
+                      <DialogContent className="max-w-4xl">
+                        <DialogHeader>
+                          <DialogTitle>
+                            {project.title} – {t("projects.demo")}
+                          </DialogTitle>
+                        </DialogHeader>
 
-                      <video
-                        src={videos[index]}
-                        controls
-                        autoPlay
-                        className="w-full rounded-lg"
-                      />
-                    </DialogContent>
-                  </Dialog>
+                        <video
+                          src={videos[index]}
+                          controls
+                          autoPlay
+                          className="w-full rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  )}
                 </CardFooter>
               </Card>
             </motion.div>
