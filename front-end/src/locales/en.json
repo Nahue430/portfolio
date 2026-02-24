@@ -6,7 +6,7 @@
     "contact": "Contact"
   },
   "header": {
-    "subtitle": "Fullstack Developer · Functional Analyst · UX & Automation Specialist"
+    "subtitle": "Fullstack Developer · Functional Analyst · UX & Process Automation"
   },
   "about": {
     "title": "About me",
@@ -43,7 +43,8 @@
         "JIRA",
         "SQL",
         "N8N",
-        "Liquid"
+        "Liquid",
+        "Figma"
       ]
     },
     "softSkills": {

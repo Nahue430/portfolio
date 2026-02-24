@@ -115,12 +115,16 @@ const About = () => {
               <div className="flex flex-wrap gap-3">
                 {technicalSkills.map((skill, index) => (
                   <motion.span
-                    key={skill}
+                    key={`${skill}-${index}`}
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
-                    whileHover={{ scale: 1.05 }}
-                    className="px-3 py-1.5 bg-muted text-foreground rounded-md text-sm lg:text-base cursor-default"
+                    className="px-3 py-1.5 bg-muted text-foreground rounded-md text-sm lg:text-base
+                               cursor-pointer
+                               transition-all duration-300 ease-in-out
+                               hover:scale-110
+                               hover:bg-neutral-900
+                               hover:text-amber-100"
                   >
                     {skill}
                   </motion.span>
@@ -146,12 +150,16 @@ const About = () => {
               <div className="flex flex-wrap gap-3">
                 {softSkills.map((skill, index) => (
                   <motion.span
-                    key={skill}
+                    key={`${skill}-${index}`}
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
-                    whileHover={{ scale: 1.05 }}
-                    className="px-3 py-1.5 bg-muted text-foreground rounded-md text-sm lg:text-base cursor-default"
+                    className="px-3 py-1.5 bg-muted text-foreground rounded-md text-sm lg:text-base
+                               cursor-pointer
+                               transition-all duration-300 ease-in-out
+                               hover:scale-110
+                               hover:bg-neutral-900
+                               hover:text-amber-100"
                   >
                     {skill}
                   </motion.span>

@@ -24,11 +24,11 @@ const Projects = () => {
   // 🔥 Metadata por proyecto
   const projectMeta = [
     {
-      github: "https://github.com/nahue430/perfumeria",
+      github: "https://github.com/Nahue430/terapias-complementarias",
       hasDemo: true,
     },
     {
-      github: "https://github.com/nahue430/ai-agent",
+      github: undefined,
       hasDemo: true,
     },
     {
@@ -90,15 +90,17 @@ const Projects = () => {
                 </CardHeader>
 
                 <CardFooter className="gap-4">
-                  <Button asChild className="flex-1">
-                    <a
-                      href={projectMeta[index]?.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      GitHub
-                    </a>
-                  </Button>
+                  {projectMeta[index]?.github && (
+                    <Button asChild className="flex-1">
+                      <a
+                        href={projectMeta[index].github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        GitHub
+                      </a>
+                    </Button>
+                  )}
 
                   {projectMeta[index]?.hasDemo && (
                     <Dialog>

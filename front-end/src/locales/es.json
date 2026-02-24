@@ -6,7 +6,7 @@
     "contact": "Contacto"
   },
   "header": {
-    "subtitle": "Desarrollador Fullstack · Analista Funcional · Especialista en UX y Automatización"
+    "subtitle": "Desarrollador Fullstack · Analista Funcional · UX y Automatización de Procesos"
   },
   "about": {
     "title": "Sobre mí",
@@ -43,7 +43,8 @@
         "JIRA",
         "SQL",
         "N8N",
-        "Liquid"
+        "Liquid",
+        "Figma"
       ]
     },
     "softSkills": {
@@ -78,7 +79,7 @@
       },
       {
         "title" : "Shopify Challenge Técnico",
-        "description": "Technical challenge in Shopify to manage dynamic variants and automated coupons. Built with Liquid and JavaScript, improving user experience and conversion flow."
+        "description": "Prueba técnica en Shopify para gestionar variantes dinámicas y cupones automatizados. Desarrollada con Liquid y JavaScript, mejorando la experiencia del usuario y el flujo de conversión."
       },
       {
         "title" : "Agente IA Challenge Técnico",
