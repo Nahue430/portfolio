@@ -32,21 +32,21 @@ const Projects = () => {
       hasDemo: true,
     },
     {
-      github: "https://github.com/nahue430/shopify-challenge",
+      github: "https://github.com/Nahue430/TPI-Grupo1-EcommercePerfumes",
       hasDemo: false,
     },
     {
-      github: "https://github.com/nahue430/laburen-challenge",
+      github: "https://github.com/Nahue430/shopify-variant-system",
       hasDemo: false,
     },
     {
-      github: "https://github.com/nahue430/otro-proyecto",
-      hasDemo: true,
+      github: "https://github.com/Nahue430/laburen-mcp",
+      hasDemo: false,
     },
   ];
 
   const images = [imagen1, imagen2, imagen3, imagen4, imagen5];
-  const videos = ["/videos/video1.mp4", "/videos/VideoAgent.mp4", "/videos/video1.mp4"];
+  const videos = ["/videos/video1.mp4", "/videos/VideoAgent.mp4"];
 
   return (
     <section id="projects" className="py-16 lg:py-24 bg-muted">
