@@ -83,7 +83,7 @@
       },
       {
         "title" : "Agente IA Challenge Técnico",
-        "description": "Prueba técnica de agente de ventas automatizado con integración de base de datos y lógica conversacional. Implementado con Cloudflare Workers, D1 y JavaScript, optimizando automatización y gestión en e-commerce."
+        "description": "Prueba técnica de agente de ventas automatizado con integración de base de datos y lógica conversacional. Implementado con Cloudflare Workers, D1 y JavaScript."
       }
     ]
   },
