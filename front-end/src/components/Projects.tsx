@@ -21,7 +21,6 @@ const Projects = () => {
 
   const projects = t("projects.items", { returnObjects: true }) as any[];
 
-  // 🔥 Metadata por proyecto
   const projectMeta = [
     {
       github: "https://github.com/Nahue430/terapias-complementarias",
@@ -71,7 +70,7 @@ const Projects = () => {
               viewport={{ once: true }}
               whileHover={{ scale: 1.03 }}
             >
-              <Card className="overflow-hidden shadow-md">
+              <Card className="overflow-hidden shadow-md h-full flex flex-col">
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={images[index]}
@@ -80,7 +79,7 @@ const Projects = () => {
                   />
                 </div>
 
-                <CardHeader>
+                <CardHeader className="flex-1">
                   <CardTitle className="text-xl lg:text-2xl">
                     {project.title}
                   </CardTitle>

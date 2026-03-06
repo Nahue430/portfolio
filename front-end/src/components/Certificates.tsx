@@ -10,7 +10,7 @@ const Certificates = () => {
   const certificates = t("certificates.items", { returnObjects: true }) as any[];
 
   const pdfs = [
-    "/certificates/UTN-certificate.pdf",
+    "/certificates/UTN.pdf",
     "/certificates/IRAM-ISO-9001.pdf",
     "/certificates/freeCodeCamp-english-B1-Passed.pdf",
     "/certificates/Nahuel-González-Workflow-Automation.pdf"
@@ -54,7 +54,7 @@ const Certificates = () => {
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
             >
-              <Card className="border-border bg-card shadow-sm hover:shadow-md transition-all">
+              <Card className="border-border bg-card shadow-sm hover:shadow-md transition-all h-full flex flex-col">
                 <CardHeader>
                   <CardTitle className="text-lg lg:text-xl">
                     {cert.title}
@@ -65,7 +65,7 @@ const Certificates = () => {
                   </CardDescription>
                 </CardHeader>
 
-                <CardContent>
+                <CardContent className="flex-1">
                   <p className="text-muted-foreground">
                     {cert.description}
                   </p>
